@@ -1,0 +1,132 @@
+void postOrderIterativeS2(BSTNode *root)
+{
+	Stack s1,s2;
+	s1.top=NULL;
+	s2.top=NULL;
+	BSTNode *a;
+	
+	if(root==NULL)
+	{
+		return;
+	}
+	push(&s1, root);
+
+	while(!isEmpty(&s1))
+	{
+		a = pop(&s1);
+		if(a!=NULL)
+		{
+			push(&s2, a);
+		}
+		if(a->left!=NULL)
+		{
+			push(&s1, a->left);
+		}
+		if(a->right!=NULL)
+		{
+			push(&s1, a->right);
+		}
+	}
+
+	while(!isEmpty(&s2))
+	{
+		printf("%d ",peek(&s2)->item);
+		pop(&s2);
+	}
+}
+
+void postOrderIterativeS1(BSTNode *root)
+{
+	Stack s;
+	s.top = NULL;
+	BSTNode *temp;
+	int c=0;
+	
+	if(root==NULL)
+	{
+		return;
+	}
+	
+	do{
+	while(root!=NULL)
+	{
+		if(root->right!=NULL)
+		{
+			push(&s, root->right);
+		}
+		push(&s, root);
+		root = root->left;
+	}
+
+	root = pop(&s);
+	temp = root->right;
+
+	if(temp!=NULL&&peek(&s)==temp)
+	{
+		pop(&s);
+		push(&s, root);
+		root = root->right;
+	}
+	else
+	{
+		printf("%d ",root->item);
+		root = NULL;
+	}}while(!isEmpty(&s));
+}
+
+void inOrderTraversal(BSTNode *root)
+{	
+	Stack s;
+	s.top = NULL;
+	BSTNode *cur;
+	BSTNode *temp;
+
+	cur = root;
+	if(cur==NULL&&s.top==NULL)
+	{
+		return;
+	}
+
+	while(cur!=NULL)
+	{
+		push(&s, cur);
+		cur = cur->left;
+	}
+
+	while(cur==NULL&&s.top!=NULL)
+	{
+		temp = pop(&s);
+		printf("%d ",temp->item);
+		cur = temp->right;
+		while(cur!=NULL)
+		{
+			push(&s, cur);
+			cur = cur->left;
+		}
+	}
+}
+
+int identical(BTNode *tree1, BTNode *tree2)
+{
+    //if identical, return 1. Else return 0;
+
+    if(tree1==NULL&&tree2==NULL)
+    {
+        return 1;
+    }
+    if(tree1==NULL&&tree2!=NULL)
+    {
+        return 0;
+    }
+    if(tree1!=NULL&&tree2==NULL)
+    {
+        return 0;
+    }
+    
+    if(tree1!=NULL&&tree2!=NULL)
+    {
+    return(tree1->item == tree2->item 
+    && identical(tree1->left,tree2->left)
+    && identical(tree1->right,tree2->right));
+    }
+}
