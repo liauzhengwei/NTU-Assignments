@@ -1,0 +1,24 @@
+1a) X = [(A+B)BC]' 
+
+3a) X = A'B'C'D' + A'B'CD' +A'BCD'+ ABCD'+AB'CD'
+=D'[A'(B'C'+B'C+BC)+ A(BC+B'C)] = D'[A'(B'C'+C(B'+B))+ AC(B+B')]=D'[A'(B'C'+C)+ AC]
+=D'[A'B'C'+A'C+ AC]=D'[A'B'C'+C(A'+ A)]=D'[A'B'C'+C]= D'[A'B'+C] = A'B'D'+CD'
+
+B) X=[AB(C+D)'AB]'
+= [AB(C'D')AB]' = [ABC'D']' =A'+B+C+D
+
+C) X=A(AB)'+A'B'C+ABC
+=A(A'+B') +A'B'C+ABC = 0 +AB' +A'B'C +ABC = B'(A+A'C) +ABC
+=B'(A+C)+ABC
+=AB' + B'C+ABC = AB'+C(B'+AB) = AB'+C(A+B')
+=AB'+ AC + B'C
+
+
+4)AB + ABC'D + ABDE'+ A'BC'E + A'B'C'E = AB + A'C'E
+= AB + ABC'D +ABDE' +A'C'E(B+B')= AB + ABC'D +ABDE' + A'C'E(1)
+= AB(1+ DC'+DE') + A'C'E = AB + A'C'E [shown]
+
+RULES
+1. (A n B)'= A'+B'
+2. A+ A'B = A+B
+3. A+AB = A

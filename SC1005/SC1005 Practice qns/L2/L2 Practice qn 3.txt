@@ -1,0 +1,14 @@
+(A n B)' = A'+B'  
+
+3a) (A'BC')' = (A+B'+C)
+B) (A'+B'C)' = A''(B'C)' = A(B+C')
+C) (ABC'D)' = A'+B'+C+D'
+D) (A+B')' = ((A'B)')' = A'B
+E) (A'B')' = A+B
+F) (A'+C'+D')' = ((ACD)')' = ACD
+change to times
+G) (A(B+C')'D)' = (A((B'C)')'D)'=(A(B'C)D)'= A'+B+C'+D'
+H) ((M+N')(M'+N))' = (M+N')'+(M'+N)' = (M'N)''+(MN')'' = M'N+MN'
+change to plus 
+I) (((AB)'C)'D)' = ((AB)'C)''+D' = (AB)'C+D'= (A'+B')C+D'
+right to left
