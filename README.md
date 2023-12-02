@@ -1,4 +1,4 @@
-# NTU-Assignments
+# NTU-Assignments (Update in Progress)
 
 Assignments from core modules of the Computer Science course in NTU:
 1. SC1003 Introduction to Computational Thinking and Programming
