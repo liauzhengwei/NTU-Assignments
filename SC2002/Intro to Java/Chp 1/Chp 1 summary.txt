@@ -1,0 +1,66 @@
+
+Chp 1: Computer Systems and Java Programming
+
+- Computer Systems
+  - Two components:
+    - Hardware - Physical components/devices
+    - Software - Computer programs
+  - Computer memory;
+    - sequential
+    - store program + data
+    - 8 bits = 1 byte in binary format
+      (number system)
+  - Computer Software:
+    - programs: Application Software + System Software
+    - Operating Systems
+      e.g., Linux
+    - Linux File System: see lab 1
+
+- Computer Programming
+  - Computer Programs
+    - Set of step-by-step instructions
+    - Perform a specific task to solve a problem
+  - Computer programming:
+    - design and implement computer programs
+  - Programming language
+    - defines a set of instructions (with specific format) 
+      that can be given to a computer
+  - Issues: Writing programs
+    - logic
+    - syntax
+  - Programming Languages
+    - high-level language
+    - assembly language
+    - machine language
+    - hardware
+  - Translator, Compiler and Interpreter
+    - Translator: one language to another
+    - Compiler
+	- converts HLL programs into lower-level languages 
+	  such as assembly language or machine language
+	- translation is off-line, not at runtime
+    - Interpreter
+	- translation to ML is on-line (at runtime)
+	- HLL programs could be executed directly
+  - High-Level Programming
+    - Procedural or Structured Programming
+	- task-driven
+    - Object-Oriented Programming 
+	- object-driven
+
+- Why Java Programming?
+  - History of Java
+  - Java 2 Platform
+    - J2EE
+    - J2SE
+    - J2ME
+  - We use J2SE 5.0
+  - OO, simple, robust and readable, portable, 
+    easy to learn, many useful features, general-purpose
+
+- Java Program Translation
+  - compiler:    source code -> Java byte code
+  - interpreter: JVM to interpret the Java byte code for 
+                 execution in a specific machine
+  Note: JVM is also a program by itself, which Java engineer prepared 
+        it for you to execute your Java byte code on different platforms
