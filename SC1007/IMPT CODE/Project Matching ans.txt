@@ -1,0 +1,339 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct _listnode
+{
+   int vertex;
+   struct _listnode *next;
+} ListNode;
+typedef ListNode StackNode;
+
+typedef struct _graph{
+   int V;
+   int E;
+   ListNode **list;
+}Graph;
+
+typedef ListNode QueueNode;
+
+typedef struct _queue{
+   int size;
+   QueueNode *head;
+   QueueNode *tail;
+} Queue;
+
+typedef struct _stack
+{
+   int size;
+   StackNode *head;
+} Stack;
+
+void insertAdjVertex(ListNode** AdjList,int vertex);
+void removeAdjVertex(ListNode** AdjList,int vertex);
+int matching(Graph g);
+int dfs(Graph g, int v, int u,int a[]);
+
+void enqueue(Queue *qPtr, int item);
+int dequeue(Queue *qPtr);
+int getFront(Queue q);
+int isEmptyQueue(Queue q);
+void removeAllItemsFromQueue(Queue *qPtr);
+void printQ(QueueNode *cur);
+//////STACK///////////////////////////////////////////
+void push(Stack *sPtr, int vertex);
+int pop(Stack *sPtr);
+int peek(Stack s);
+int isEmptyStack(Stack s);
+void removeAllItemsFromStack(Stack *sPtr);
+//////////////////////////////////
+
+int main()
+{
+   int Prj, Std, Mtr; //Project, Student and Mentor;
+   int maxMatch;
+   int np,nm; //number of projects and number of mentors
+
+   int i,j;
+   int k;
+   
+   ListNode* temp;
+   scanf("%d %d %d", &Std, &Prj, &Mtr);
+
+   //build graph
+   Graph g;
+   
+   g.V = Prj + Std + Std + Mtr + 2;
+   g.list = (ListNode **)malloc(g.V * sizeof(ListNode*));
+
+   for(i=0;i<g.V;i++){
+      g.list[i] = NULL;
+   }
+   for(i=0;i<Std;i++){  //std 1,2,3,4 to std 5,6,7,8
+      scanf("%d %d",&np,&nm);
+      insertAdjVertex(&g.list[i], Std+i+1);  
+      g.E++;
+
+      for(j=0;j<np;j++){   //prj 9,10,11 to std 1,2,3,4
+         scanf("%d",&k);
+         insertAdjVertex(&g.list[Std + Std + k -1], i +1);    
+         g.E++;
+      }
+      for(j=0;j<nm;j++){   //std 5,6,7,8 to mtr 12,13,14
+         scanf("%d",&k);
+         insertAdjVertex(&g.list[Std + i], Std + Std +Prj + k); 
+         g.E++;
+      }
+   }
+
+   for(j=0;j<Prj;j++){  //source 15 to prj 9,10,11 
+      insertAdjVertex(&g.list[Std + Std + Prj + Mtr], Std + Std + j + 1);
+      g.E++;
+   }
+
+   for(j=0;j<Mtr;j++){  //mtr 12,13,14, to sink 16
+      insertAdjVertex(&g.list[Std + Std + Prj + j], Std + Std + Prj + Mtr + 2);
+      g.E++;
+   }
+
+   /*ListNode *temp;
+      for(i=0;i<g.V;i++){
+         printf("%d: ",i+1);
+         temp = g.list[i];
+         while(temp!=NULL){
+            printf("%d -> ",temp->vertex);
+            temp = temp->next;
+         }
+         printf("\n");
+      }
+   */
+   //apply Ford Fulkerson algorithm
+   // use DFS or BFS to find a path
+   maxMatch = matching(g);
+   printf("%d\n", maxMatch);
+   return 0;
+}
+
+int matching(Graph g)
+{
+   int a[60];
+   int i=0;
+   int j=0;
+   int r1,r2;
+
+   ListNode* cur;
+
+   for(i=0;i<60;i++){
+      a[i] = 0;
+   }
+
+   while(dfs(g, (g.V-1),g.V,a)==1){ //v is source 15, u is sink 16
+      j=0;
+      while(a[j+1]!=-1){   //while not at end of array
+         r1 = a[j];     //this is the sink node initially
+         r2 = a[j+1];   //node before sink node
+         insertAdjVertex(&g.list[r1-1], r2);    //create an backwards edge
+         removeAdjVertex(&g.list[r2-1], r1);    //remove the forwards edge
+         j++;
+      }
+      for(i=0;i<60;i++){   //reset array to empty
+         a[i] = 0;
+      }
+   }
+   i=0;
+   cur = g.list[g.V-1];    //count the number of backwards edges form sink
+   while(cur!=NULL){
+      i++;
+      cur = cur->next;
+   }
+   return i;
+}
+
+int dfs(Graph g, int v, int u, int a[]){
+   Stack s;
+   s.size = 0;
+   s.head = NULL;
+
+   ListNode *cur;
+   int i,t;
+   int y=0;
+   int *visited;
+   visited = malloc(sizeof(int)*g.V);
+
+   for(i=0;i<g.V;i++){
+      visited[i] = 0;
+   }
+
+   push(&s,v);
+   visited[v-1] = 1;    //source visited
+   int unvisited;
+   while(isEmptyStack(s)==0){    //while not empty stack
+      t = peek(s);
+
+      unvisited = 0;
+      cur = g.list[t-1];
+      while(cur!=NULL){
+         if(visited[cur->vertex-1]==0){   //if not visited, visit it and set visited
+            push(&s,cur->vertex);
+            visited[cur->vertex-1]=1;
+            unvisited = 1;
+            break;      //leave the loop once visited
+         }
+         cur = cur->next;
+      }
+      if(unvisited ==0){   //all neighbour nodes visited
+         if(t!=u){         //check if top of stack is sink
+            pop(&s);    //not sink
+         }
+         else{    //is sink
+            while(isEmptyStack(s)==0){
+               t = peek(s);
+               a[y] = t;      //store all the values of nodes traversed in an array
+               y++;
+               pop(&s);
+            }
+            a[y] = -1;  //last value of array is -1
+
+            return 1;   //path found
+         }
+      }
+   //go another route after popping stack
+   }
+   return 0;   //no path found
+}
+
+
+void removeAdjVertex(ListNode** AdjList,int vertex)
+{
+   ListNode *temp, *preTemp;
+   if(*AdjList != NULL)
+   {
+      if((*AdjList)->vertex ==vertex){//first node
+         temp = *AdjList;
+         *AdjList = (*AdjList)->next;
+         free(temp);
+         return;
+      }
+      preTemp = *AdjList;
+      temp = (*AdjList)->next;
+      while(temp!=NULL && temp->vertex != vertex)
+      {
+         preTemp= temp;
+         temp = temp->next;
+      }
+      preTemp->next = temp->next;
+      free(temp);
+   }
+}
+
+void insertAdjVertex(ListNode** AdjList,int vertex)
+{
+   ListNode *temp;
+   if(*AdjList==NULL)
+   {
+      *AdjList = (ListNode *)malloc(sizeof(ListNode));
+      (*AdjList)->vertex = vertex;
+      (*AdjList)->next = NULL;
+   }
+   else{
+      temp = (ListNode *)malloc(sizeof(ListNode));
+      temp->vertex = vertex;
+      temp->next = *AdjList;
+      *AdjList = temp;
+   }
+}
+
+void enqueue(Queue *qPtr, int vertex) {
+   QueueNode *newNode;
+   newNode = malloc(sizeof(QueueNode));
+   if(newNode==NULL) exit(0);
+
+   newNode->vertex = vertex;
+   newNode->next = NULL;
+
+   if(isEmptyQueue(*qPtr))
+      qPtr->head=newNode;
+   else
+      qPtr->tail->next = newNode;
+
+   qPtr->tail = newNode;
+   qPtr->size++;
+}
+
+int dequeue(Queue *qPtr) {
+   if(qPtr==NULL || qPtr->head==NULL){ //Queue is empty or NULL pointer
+      return 0;
+   }
+   else{
+      QueueNode *temp = qPtr->head;
+      qPtr->head = qPtr->head->next;
+      if(qPtr->head == NULL) //Queue is emptied
+         qPtr->tail = NULL;
+
+      free(temp);
+      qPtr->size--;
+      return 1;
+   }
+}
+
+int getFront(Queue q){
+   return q.head->vertex;
+}
+
+int isEmptyQueue(Queue q) {
+   if(q.size==0) return 1;
+   else return 0;
+}
+
+void removeAllItemsFromQueue(Queue *qPtr)
+{
+  while(dequeue(qPtr));
+}
+
+void printQ(QueueNode *cur){
+   if(cur==NULL) printf("Empty");
+
+   while (cur != NULL){
+      printf("%d ", cur->vertex);
+      cur = cur->next;
+   }
+   printf("\n");
+}
+
+void push(Stack *sPtr, int vertex)
+{
+   StackNode *newNode;
+   newNode= malloc(sizeof(StackNode));
+   newNode->vertex = vertex;
+   newNode->next = sPtr->head;
+   sPtr->head = newNode;
+   sPtr->size++;
+}
+
+int pop(Stack *sPtr)
+{
+   if(sPtr==NULL || sPtr->head==NULL){
+      return 0;
+   }
+   else{
+      StackNode *temp = sPtr->head;
+      sPtr->head = sPtr->head->next;
+      free(temp);
+      sPtr->size--;
+      return 1;
+   }
+}
+
+int isEmptyStack(Stack s)
+{
+   if(s.size==0) return 1;
+   else return 0;
+}
+
+int peek(Stack s){
+   return s.head->vertex;
+}
+
+void removeAllItemsFromStack(Stack *sPtr)
+{
+   while(pop(sPtr));
+}

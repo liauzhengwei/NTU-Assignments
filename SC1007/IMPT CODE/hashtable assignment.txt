@@ -1,0 +1,273 @@
+Q1.Coalesce hashing
+int HashInsert(int key, HashSlot hashTable[])
+{   
+    int i=0;
+    int a=0;
+    int b=0;
+    if (HashFind(key, hashTable)!=-1){
+        return -1;
+    }
+    //table full, return value larger than table
+    while(hashTable[i].indicator==USED){
+        i++;    
+        if(i==TABLESIZE)
+        {
+            return TABLESIZE;
+        }
+    }
+
+    int index = hash(key);
+    if(hashTable[index].indicator==EMPTY){
+        hashTable[index].key = key;
+        hashTable[index].indicator = USED;
+        return index;
+    }
+    else if(hashTable[index].indicator==USED) {        
+        b=index;                            //index = 1;
+        while (hashTable[b].next !=-1){    //1 7 -1
+            b = hashTable[b].next;      
+        }
+        index = b;                         //index = 1; but is previous index
+        while(hashTable[b].indicator!=EMPTY){   
+            b = (b+1)%TABLESIZE;
+        }
+        hashTable[index].next = b;      //index = 1;
+    
+        hashTable[b].key = key;         //b =2;
+        hashTable[b].indicator = USED;
+        hashTable[b].next = -1;
+        return b;
+    }
+}
+
+int HashFind(int key, HashSlot hashTable[])
+{
+    int index = hash(key);
+
+    while(index!=-1){
+        if(hashTable[index].key==key)
+            return index;
+        index = hashTable[index].next;
+    }
+    return -1;
+}
+
+Q2.Open addressing of double hashing
+int HashInsert(int key, HashSlot hashTable[])
+{   
+    int a = 0;
+    int index;
+    int i;
+    int b;
+    int c=0;
+
+    while(a<TABLESIZE){
+        int index = hash1(key+a*hash2(key));
+
+        if(index==0 && hashTable[0].key==key && hashTable[0].indicator==USED){
+            return -1;
+        }
+        else if(hashTable[index].key==key && hashTable[index].indicator==USED){
+                return -1;
+            }   
+        else if(hashTable[index].indicator==DELETED){
+            i = index;
+            b = a;
+            while(b<TABLESIZE){
+                int index = hash1(key+b*hash2(key));
+                if(hashTable[index].key==key && hashTable[index].indicator==USED){
+                    return -1;
+                }
+                else if(hashTable[index].indicator==USED){
+                    c++;
+                }
+
+                else if(hashTable[index].indicator==EMPTY){
+                    hashTable[i].key = key;
+                    hashTable[i].indicator = USED;
+                    a = a+c;
+                    return a;
+                } 
+            b++;
+            }
+            hashTable[i].key = key;
+            hashTable[i].indicator = USED;
+            a = a+c;
+            return a;
+        }
+
+        else if(hashTable[index].indicator==EMPTY){
+            hashTable[index].key = key;
+            hashTable[index].indicator = USED;
+            return a;
+        }
+        else{
+            a++;
+        }
+    }
+    return TABLESIZE;
+
+}
+
+int HashDelete(int key, HashSlot hashTable[])
+{   
+    int a = 0;
+    int index;
+    int c;
+    
+
+    if(key<0){
+        return TABLESIZE+1;
+    }
+
+    while (a != TABLESIZE) {
+        c = a+1;
+        index = hash1(key + a * hash2(key));
+        if (hashTable[index].key == key && hashTable[index].indicator == USED) {
+            hashTable[index].indicator = DELETED;
+            if(c>TABLESIZE){
+                return TABLESIZE+1;
+            }
+            else{
+                return c;
+            }
+        }
+        a++;
+    }
+    return -1;
+}
+
+
+Q3. Doubly linked list
+int HashInsert(HashTable* Q1Ptr, int key)
+{
+    ListNode *temp;
+    ListNode *cur;
+    int index;
+
+    if(key<0){
+        return 0;
+    }
+
+    //printf("%d",index);
+    ListNode *newNode = (ListNode*)malloc(sizeof(ListNode));
+
+    newNode->key = key;
+    newNode->pre = NULL;
+    newNode->next = NULL;
+    
+    if(Q1Ptr->hSize!=0)
+    {
+        index = Hash(key,Q1Ptr->hSize);
+    }
+    else{
+        free(newNode);
+        return 0;
+    }
+
+    if((Q1Ptr->Table[index]).head == NULL){
+        Q1Ptr->Table[index].head = newNode;
+        Q1Ptr->Table[index].size++;
+        Q1Ptr->nSize++;
+        return 1;
+    }
+    else{   
+        temp = Q1Ptr->Table[index].head;
+        cur = temp;
+        while(temp!=NULL){
+            if(temp->key == key){       //duplicate
+                free(newNode);
+                return 0;
+            } 
+            temp = temp->next;
+        }
+        temp = cur;
+
+        Q1Ptr->Table[index].head = newNode;
+        newNode->next = temp;
+        temp->pre = newNode;
+    }
+    Q1Ptr->Table[index].size++;
+    Q1Ptr->nSize++;
+    return 1;
+}
+
+int HashDelete(HashTable* Q1Ptr, int key)
+{
+    //deleted
+    //not existing
+    int index;
+    ListNode *temp;
+    ListNode *cur;
+    ListNode *pit;
+
+    if(key<0){
+        return 0;
+    }
+
+    if(Q1Ptr->hSize>0)
+    {
+        index = Hash(key,Q1Ptr->hSize);
+    }
+    else{
+        return 0;
+    }
+
+    temp = Q1Ptr->Table[index].head;
+    if(Q1Ptr->Table[index].head==NULL){
+        return 0;
+    }
+
+    while(temp!=NULL){
+        if(temp->key==key){
+            //delete, free the node and connect nodes
+            //first node,middle nodes, last node
+            if(temp == Q1Ptr->Table[index].head){   //first node
+                if(temp->next!=NULL){
+                    cur = temp;
+                    temp = temp->next;
+                    //temp->pre = NULL;
+                    Q1Ptr->Table[index].head = temp;
+
+                    free(cur);
+                    Q1Ptr->Table[index].size--;
+                    Q1Ptr->nSize--;
+                    return 1;
+                }
+                else{
+                    Q1Ptr->Table[index].head->pre=NULL;
+    
+                    Q1Ptr->Table[index].head = NULL;
+                    Q1Ptr->Table[index].size=0;
+                    Q1Ptr->nSize--;
+                    return 1;
+                }
+            }
+            else if(temp->next==NULL){      //last node
+                cur = temp;
+                temp = temp->pre;
+                temp->next = NULL;
+                free(cur);
+                Q1Ptr->Table[index].size--;
+                Q1Ptr->nSize--;
+                return 1;
+            }
+            else {              //middle node
+                //cur = temp;
+                temp = temp->pre;
+                pit = temp->next;
+                temp->next = temp->next->next;
+                if (pit->next != NULL) {
+                    pit->next->pre = temp;
+                }
+                free(pit);
+
+                Q1Ptr->Table[index].size--;
+                Q1Ptr->nSize--;
+                return 1;
+            }
+        }
+        temp = temp->next;
+    }
+    return 0;
+}

@@ -1,0 +1,198 @@
+graph assignment qns
+
+Q1 Shortest distance
+int BFS (Graph g, int v, int w){
+
+    Queue q;
+    int visited[g.V];
+    int distance[g.V];
+    int i;
+
+    for(i=0;i<g.V;i++){
+        visited[i] = 0;
+        distance[i] = -1;
+    }
+
+    enqueue(&q,v);
+    visited[v-1] = 1;
+    distance[v-1] = 0;
+
+    while(!isEmptyQueue(q)){
+        int curr = getFront(q);
+        dequeue(&q);
+
+        if(curr==w){
+            removeAllItemsFromQueue(&q);
+            return distance[curr-1];
+        }
+
+        ListNode* temp = g.list[curr-1];
+        while(temp!=NULL){
+            int neighbour = temp->vertex;
+            if(!visited[neighbour-1]){
+                enqueue(&q,neighbour);
+                visited[neighbour-1] = 1;
+                distance[neighbour-1] = distance[curr-1] +1;
+            }
+            temp = temp->next;
+        }
+    }
+    return -1;
+}
+
+Q2 Graph connection
+int CC (Graph g)
+{
+    //do dfs for every vertice
+        //put any graph vertice on top of stack
+        //take top item of stack and add to visited list
+        //create list of vertex's adjacent nodes. Add unvisited adjacent to stack
+        //repeat 2 and 3 until stack empty
+
+    Stack s;
+    s.head = NULL;
+    s.size = 0;
+    int visited[g.V];
+    int i;
+    int u;
+    int m;
+    int p;
+
+    //another for loop for every vertice
+    for(u=0;u<g.V;u++){
+        for(i=0;i<g.V;i++){ //set all nodes to unvisited
+            visited[i] = 0;
+        }
+
+        int m = g.list[u]->vertex;
+        //push a node into the stack
+        push(&s,m);
+
+        while(!isEmptyStack(s)){
+            p = peek(s);
+            pop(&s);
+
+            if(!visited[p-1]){
+                visited[p-1] = 1;
+                //get all adjacent of popped index
+                ListNode* temp = g.list[p-1];
+                while(temp!=NULL){
+                    push(&s,temp->vertex);
+                    temp = temp->next;
+                }
+            }
+        }
+
+        for(i=0;i<g.V;i++){
+            if(visited[i]==0){
+                return -1;
+            }
+        }
+    }    
+    return 1;
+}
+
+Q3City population qn
+struct Node{
+    int val;
+    struct Node* next;
+};
+
+int parent[100000000];
+struct Node* adj[100000000] = {NULL};
+int depth[100000000];   //currently only 10^8
+
+void dfs(int cur_node,int prev_node,int d){
+    depth[cur_node] = d;
+    parent[cur_node] = prev_node;
+    struct Node* v = adj[cur_node];
+    while(v!=NULL){
+        if(prev_node != v->val){
+            dfs(v->val,cur_node,d+1);
+        }
+        v = v->next;
+    }    
+}
+
+int lca(int t,int r, int* population, int test){
+    int count = 0;
+
+    while(depth[t]>depth[r]){
+        if(population[t-1]<=test){
+            count++;
+        }
+        t = parent[t];
+    }
+    while(depth[r]>depth[t]){
+        if(population[r-1]<=test){
+            count++;
+        }
+        r = parent[r];
+    }
+
+    while(t!=r){
+        if(population[t-1]<=test){
+            count++;
+        }
+        if(population[r-1]<=test){
+            count++;
+        }
+        t = parent[t];
+        r = parent[r];
+    }
+    
+    if(population[r-1]<=test){
+        count++;
+    }
+    return count;
+}
+
+int* city_population (int N, int* population, int** road, int Q, int** cities) 
+{   
+    int i;
+    int *ans = (int*)malloc(Q*sizeof(int));
+    
+    for(i=0;i<Q;i++){
+        ans[i] = 0;
+    }
+
+    for(int i = 0;i<N-1;i++){
+        int u = road[i][0];
+        int v = road[i][1];
+
+        struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+        newNode->val = v;
+        newNode->next = adj[u];
+        adj[u] = newNode;
+
+        newNode = (struct Node*) malloc(sizeof(struct Node));
+        newNode->val = u;
+        newNode->next = adj[v];
+        adj[v] = newNode;
+    }
+
+
+    for(i=1;i<=N;i++){
+        parent[i] = 0;
+    }
+
+    //int dep;
+    int end;
+    int count;
+    int test;
+
+    dfs(1,-1,1);
+
+    for(i=0;i<Q;i++){
+        int start= cities[i][0];
+        count = 0;
+        end = cities[i][1];
+        test = cities[i][2];
+
+        count = lca(start,end,population,test);
+
+        ans[i] = count;
+    }
+    return ans;
+
+}
