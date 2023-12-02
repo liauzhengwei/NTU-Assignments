@@ -1,0 +1,69 @@
+Assignment 6
+Q1 
+void sumToC(LinkedList* ll, int C, ArrayList* al)
+{
+	int t = C;		//removeNode returns 1 and 0
+	int index = 0;
+	int a = 1;
+	int b;
+	int v;
+
+	while(a<=C){
+		if(t<a){
+			index--;
+			a = findNode(*ll, index)->item;
+			removeNode(ll,index);
+			//find value of node removed and add to t
+
+			t = t+a;
+			a++;
+		}
+		insertNode(ll, index, a);
+		index++;
+		t = t-a;
+
+		if(t==0){ 
+			int *newArray = (int*)malloc(sizeof(int)*(ll->size));
+			ListNode *curListNode = ll->head;
+			
+			for(int i=0;i<ll->size;i++){
+				newArray[i] = curListNode->item;
+				curListNode = curListNode->next;
+			}
+			
+			ArrayNode *curArrNode = (ArrayNode*)malloc(sizeof(ArrayNode));
+			curArrNode->itemArray = newArray;
+			curArrNode->sizeArray = ll->size;
+			curArrNode->next = NULL;
+			
+			
+			if(al->head==NULL){
+				al->head = curArrNode;
+				al->size++;
+			}
+			else{
+				ArrayNode *newArrNode = al->head;
+				while(newArrNode->next!=NULL){
+					newArrNode = newArrNode->next;
+				}
+				newArrNode->next = curArrNode;
+				al->size++;
+			}
+
+			if(a == C){
+				break;
+			}
+
+			index--;
+			b = findNode(*ll, index)->item;
+			removeNode(ll,index);
+			t = t+b;
+
+			index--;
+			a = findNode(*ll, index)->item;
+			removeNode(ll,index);
+			t = t+a;
+		}
+	a++;
+	}
+}
