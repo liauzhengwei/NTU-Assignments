@@ -1,0 +1,23 @@
+1.Get all the datasets from online(done)
+2.Change them to postive, negative, neutral(done)
+3.Combine all the datasets together(done)
+4.Remove punctuation,stopwords, do lemmatization & stemming(done)
+5.Get tf-idf(done)
+6.Choose a machine learning model/deep learning model(done)
+ML: SVM,		Random Forest,		Logistic Regression(this),		Gradient Boosting 	Naive Bayes	
+
+DL: use with word embeddings like Word2Cev or GloVe to get semantic relationships between words
+RNN		LSTM		CNN	BERT(this)
+
+Concatenate BERT value with tfidf value then train (done)
+
+7.Train test split using tfidf values as features and sentiment labels as targets(done)
+8.Evaluate accuracy, precision, recall, F1-score(done)
+
+9.Test on manually labeled data
+10.Preprocess manually labeled data in the same way as online datasets
+11.Compare and calculate accuracy of model
+
+12.Identify strengths and weaknesses of model 
+13.Make appropriate adjustments
+14.Report and recommendations
