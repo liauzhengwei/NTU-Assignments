@@ -1,7 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "bFixedVVaryE (time taken)/opencsv-5.8.jar",
-        "bFixedEVaryV (time taken)/opencsv-5.8.jar"
-    ]
-}
