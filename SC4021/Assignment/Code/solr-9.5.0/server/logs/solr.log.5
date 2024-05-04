@@ -1,0 +1,347 @@
+2024-03-28 20:25:31.629 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.19; built: 2023-12-15T20:38:32.477Z; git: 8492d1c78f122bb30cce20aecfa07e7283facd47; jvm 21.0.2+13-LTS-58
+2024-03-28 20:25:32.471 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-03-28 20:25:32.518 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-03-28 20:25:32.535 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.5.0
+2024-03-28 20:25:32.536 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2024-03-28 20:25:32.536 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0
+2024-03-28 20:25:32.536 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-03-28T20:25:32.536678500Z
+2024-03-28 20:25:32.540 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\logs\jvm_crash_15124.log
+2024-03-28 20:25:32.570 INFO  (main) [c: s: r: x: t:] o.a.l.s.MemorySegmentIndexInputProvider Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+2024-03-28 20:25:32.655 INFO  (main) [c: s: r: x: t:] o.a.l.i.v.PanamaVectorizationProvider Java vector incubator API enabled; uses preferredBitSize=256; FMA enabled
+2024-03-28 20:25:32.661 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr (source: system property: solr.solr.home)
+2024-03-28 20:25:32.686 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr\solr.xml
+2024-03-28 20:25:32.753 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/tohyo/Downloads/solr-9.5.0/solr-9.5.0/lib]
+2024-03-28 20:25:34.282 INFO  (main) [c: s: r: x: t:] o.a.s.u.t.SimplePropagator Always-on trace id generation enabled.
+2024-03-28 20:25:34.786 WARN  (main) [c: s: r: x: t:] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-03-28 20:25:34.789 WARN  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-03-28 20:25:35.133 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr
+2024-03-28 20:25:35.133 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Cores are: [stocks_core2]
+2024-03-28 20:25:35.172 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-03-28 20:25:35.290 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.s.IndexSchema Schema name=default-config
+2024-03-28 20:25:35.605 WARN  (main) [c: s: r: x: t:] o.g.j.m.i.MessagingBinders A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
+2024-03-28 20:25:35.843 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2024-03-28 20:25:35.844 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.c.CoreContainer Creating SolrCore 'stocks_core2' using configuration from instancedir C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr\stocks_core2, trusted=true
+2024-03-28 20:25:35.929 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr\stocks_core2], dataDir=[C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr\stocks_core2\data\]
+2024-03-28 20:25:36.212 INFO  (main) [c: s: r: x: t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-28 20:25:36.845 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-28 20:25:36.882 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-03-28 20:25:36.882 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-03-28 20:25:36.914 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-03-28 20:25:36.916 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-03-28 20:25:36.978 INFO  (main) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@772485dd{solr-jetty-context.xml,/solr,file:///C:/Users/tohyo/Downloads/solr-9.5.0/solr-9.5.0/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server/solr-webapp/webapp}
+2024-03-28 20:25:36.990 INFO  (main) [c: s: r: x: t:] o.e.j.s.RequestLogWriter Opened C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\logs\2024_03_28.request.log
+2024-03-28 20:25:37.009 INFO  (main) [c: s: r: x: t:] o.e.j.s.AbstractConnector Started ServerConnector@2b58f754{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2024-03-28 20:25:37.011 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server Started Server@32057e6{STARTING}[10.0.19,sto=0] @7650ms
+2024-03-28 20:25:37.220 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\tohyo\Downloads\solr-9.5.0\solr-9.5.0\server\solr\stocks_core2\conf
+2024-03-28 20:25:37.245 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.s.DirectSolrSpellChecker init: {name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4}
+2024-03-28 20:25:37.250 INFO  (qtp1570470538-45-localhost-1) [c: s: r: x: t:localhost-1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=javabin&version=2} status=0 QTime=71
+2024-03-28 20:25:37.257 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:stocks_core2 t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-03-28 20:25:37.259 INFO  (searcherExecutor-13-thread-1-processing-stocks_core2) [c: s: r: x:stocks_core2 t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-03-28 20:25:37.259 INFO  (searcherExecutor-13-thread-1-processing-stocks_core2) [c: s: r: x:stocks_core2 t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-03-28 20:25:37.272 INFO  (searcherExecutor-13-thread-1-processing-stocks_core2) [c: s: r: x:stocks_core2 t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-03-28 20:26:34.543 INFO  (qtp1570470538-45-localhost-3) [c: s: r: x: t:localhost-3] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:26:34.603 INFO  (qtp1570470538-73-localhost-4) [c: s: r: x: t:localhost-4] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=60
+2024-03-28 20:26:34.648 INFO  (qtp1570470538-79-localhost-5) [c: s: r: x: t:localhost-5] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=40
+2024-03-28 20:27:04.578 INFO  (qtp1570470538-79-localhost-6) [c: s: r: x: t:localhost-6] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:27:04.592 INFO  (qtp1570470538-77-localhost-8) [c: s: r: x: t:localhost-8] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1711657624572&since=0} status=0 QTime=14
+2024-03-28 20:27:04.640 INFO  (qtp1570470538-75-localhost-7) [c: s: r: x: t:localhost-7] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=62
+2024-03-28 20:27:07.991 INFO  (qtp1570470538-80-localhost-11) [c: s: r: x: t:localhost-11] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:27:07.998 INFO  (qtp1570470538-75-localhost-10) [c: s: r: x: t:localhost-10] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1711657624572} status=0 QTime=6
+2024-03-28 20:27:08.038 INFO  (qtp1570470538-79-localhost-9) [c: s: r: x: t:localhost-9] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=47
+2024-03-28 20:30:50.027 INFO  (qtp1570470538-46-localhost-12) [c: s: r: x: t:localhost-12] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:30:50.073 INFO  (qtp1570470538-77-localhost-13) [c: s: r: x: t:localhost-13] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=43
+2024-03-28 20:30:50.112 INFO  (qtp1570470538-77-localhost-14) [c: s: r: x: t:localhost-14] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=27
+2024-03-28 20:30:50.123 INFO  (qtp1570470538-77-localhost-15) [c: s: r: x: t:localhost-15] o.a.s.s.HttpSolrCall [admin] webapp=null path=/cluster/security/authorization params={wt=json&_=1711657850015} status=0 QTime=1
+2024-03-28 20:30:52.237 INFO  (qtp1570470538-76-localhost-17) [c: s: r: x: t:localhost-17] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:30:52.248 INFO  (qtp1570470538-46-localhost-16) [c: s: r: x: t:localhost-16] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1711657594469} status=0 QTime=12
+2024-03-28 20:30:52.269 INFO  (qtp1570470538-77-localhost-20) [c: s: r: x: t:localhost-20] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:30:52.278 INFO  (qtp1570470538-76-localhost-19) [c: s: r: x: t:localhost-19] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1711657594469} status=0 QTime=9
+2024-03-28 20:30:52.289 INFO  (qtp1570470538-47-localhost-18) [c: s: r: x: t:localhost-18] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=52
+2024-03-28 20:30:52.324 INFO  (qtp1570470538-79-localhost-21) [c: s: r: x: t:localhost-21] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=31
+2024-03-28 20:31:09.570 INFO  (qtp1570470538-77-localhost-22) [c: s: r: x: t:localhost-22] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:09.571 INFO  (qtp1570470538-79-localhost-23) [c: s: r: x: t:localhost-23] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/properties params={wt=json&_=1711657869566} status=0 QTime=1
+2024-03-28 20:31:09.618 INFO  (qtp1570470538-48-localhost-24) [c: s: r: x: t:localhost-24] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=47
+2024-03-28 20:31:16.040 INFO  (qtp1570470538-47-localhost-27) [c: s: r: x: t:localhost-27] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:16.125 INFO  (qtp1570470538-48-localhost-26) [c: s: r: x: t:localhost-26] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/threads params={wt=json&_=1711657876035} status=0 QTime=85
+2024-03-28 20:31:16.159 INFO  (qtp1570470538-46-localhost-25) [c: s: r: x: t:localhost-25] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=119
+2024-03-28 20:31:18.335 INFO  (qtp1570470538-77-localhost-28) [c: s: r: x: t:localhost-28] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:18.339 INFO  (qtp1570470538-48-localhost-29) [c: s: r: x:stocks_core2 t:localhost-29] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1711657878330} status=0 QTime=4
+2024-03-28 20:31:18.341 INFO  (qtp1570470538-73-localhost-33) [c: s: r: x:stocks_core2 t:localhost-33] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1711657594470&ts=1711657594470} status=503 QTime=4
+2024-03-28 20:31:18.352 INFO  (qtp1570470538-47-localhost-31) [c: s: r: x:stocks_core2 t:localhost-31] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1711657878330} status=0 QTime=17
+2024-03-28 20:31:18.403 INFO  (qtp1570470538-76-localhost-30) [c: s: r: x: t:localhost-30] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=68
+2024-03-28 20:31:18.408 INFO  (qtp1570470538-80-localhost-32) [c: s: r: x:stocks_core2 t:localhost-32] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1711657878330} status=0 QTime=71
+2024-03-28 20:31:25.252 INFO  (qtp1570470538-44-localhost-34) [c: s: r: x: t:localhost-34] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:25.335 INFO  (qtp1570470538-80-localhost-36) [c: s: r: x: t:localhost-36] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/threads params={wt=json&_=1711657876035} status=0 QTime=79
+2024-03-28 20:31:25.369 INFO  (qtp1570470538-78-localhost-35) [c: s: r: x: t:localhost-35] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=114
+2024-03-28 20:31:29.702 INFO  (qtp1570470538-77-localhost-37) [c: s: r: x: t:localhost-37] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:29.702 INFO  (qtp1570470538-79-localhost-40) [c: s: r: x:stocks_core2 t:localhost-40] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1711657594470&ts=1711657594470} status=503 QTime=0
+2024-03-28 20:31:29.702 INFO  (qtp1570470538-45-localhost-41) [c: s: r: x:stocks_core2 t:localhost-41] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1711657878330} status=0 QTime=0
+2024-03-28 20:31:29.714 INFO  (qtp1570470538-44-localhost-38) [c: s: r: x:stocks_core2 t:localhost-38] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1711657878330} status=0 QTime=12
+2024-03-28 20:31:29.788 INFO  (qtp1570470538-76-localhost-39) [c: s: r: x:stocks_core2 t:localhost-39] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1711657878330} status=0 QTime=85
+2024-03-28 20:31:29.792 INFO  (qtp1570470538-81-localhost-42) [c: s: r: x: t:localhost-42] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=90
+2024-03-28 20:31:34.702 INFO  (qtp1570470538-80-localhost-43) [c: s: r: x: t:localhost-43] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:34.708 INFO  (qtp1570470538-81-localhost-45) [c: s: r: x:stocks_core2 t:localhost-45] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=6
+2024-03-28 20:31:34.758 INFO  (qtp1570470538-78-localhost-44) [c: s: r: x: t:localhost-44] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=55
+2024-03-28 20:31:46.950 INFO  (qtp1570470538-44-localhost-46) [c: s: r: x: t:localhost-46] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:46.955 INFO  (qtp1570470538-48-localhost-48) [c: s: r: x:stocks_core2 t:localhost-48] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=2
+2024-03-28 20:31:46.976 INFO  (qtp1570470538-81-localhost-49) [c: s: r: x:stocks_core2 t:localhost-49] o.a.s.c.PluginBag Going to create a new requestHandler with {type = requestHandler,name = /analysis/field,class = solr.FieldAnalysisRequestHandler,attributes = {class=solr.FieldAnalysisRequestHandler, startup=lazy, useParams=_ANALYSIS_FIELD, name=/analysis/field},args = {startup=lazy, useParams=_ANALYSIS_FIELD}} 
+2024-03-28 20:31:46.993 INFO  (qtp1570470538-81-localhost-49) [c: s: r: x:stocks_core2 t:localhost-49] o.a.s.c.S.Request webapp=/solr path=/analysis/field params={analysis.fieldvalue=r&analysis.fieldname=Index_str&analysis.showmatch=true&verbose_output=1&wt=json&_=1711657894698} status=0 QTime=17
+2024-03-28 20:31:47.018 INFO  (qtp1570470538-73-localhost-47) [c: s: r: x: t:localhost-47] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=64
+2024-03-28 20:31:52.841 INFO  (qtp1570470538-44-localhost-50) [c: s: r: x: t:localhost-50] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:31:52.847 INFO  (qtp1570470538-78-localhost-51) [c: s: r: x:stocks_core2 t:localhost-51] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:31:52.864 INFO  (qtp1570470538-81-localhost-53) [c: s: r: x:stocks_core2 t:localhost-53] o.a.s.c.S.Request webapp=/solr path=/analysis/field params={analysis.fieldvalue=5&analysis.fieldname=Index_str&analysis.showmatch=true&verbose_output=1&wt=json&_=1711657894698} status=0 QTime=0
+2024-03-28 20:31:52.897 INFO  (qtp1570470538-48-localhost-52) [c: s: r: x: t:localhost-52] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=52
+2024-03-28 20:32:01.713 INFO  (qtp1570470538-48-localhost-55) [c: s: r: x: t:localhost-55] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:01.714 INFO  (qtp1570470538-78-localhost-56) [c: s: r: x:stocks_core2 t:localhost-56] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:32:01.742 INFO  (qtp1570470538-81-localhost-57) [c: s: r: x:stocks_core2 t:localhost-57] o.a.s.c.S.Request webapp=/solr path=/analysis/field params={analysis.fieldvalue=5&analysis.fieldname=Index&analysis.showmatch=true&verbose_output=1&wt=json&_=1711657894698} status=0 QTime=4
+2024-03-28 20:32:01.774 INFO  (qtp1570470538-73-localhost-54) [c: s: r: x: t:localhost-54] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=61
+2024-03-28 20:32:11.800 INFO  (qtp1570470538-73-localhost-58) [c: s: r: x: t:localhost-58] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:11.801 INFO  (qtp1570470538-78-localhost-59) [c: s: r: x:stocks_core2 t:localhost-59] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:32:11.805 INFO  (qtp1570470538-76-localhost-61) [c: s: r: x:stocks_core2 t:localhost-61] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1711657931791} status=0 QTime=5
+2024-03-28 20:32:11.847 INFO  (qtp1570470538-44-localhost-60) [c: s: r: x: t:localhost-60] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=47
+2024-03-28 20:32:11.863 INFO  (qtp1570470538-47-localhost-62) [c: s: r: x:stocks_core2 t:localhost-62] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1711657878330} status=0 QTime=34
+2024-03-28 20:32:21.378 INFO  (qtp1570470538-45-localhost-63) [c: s: r: x: t:localhost-63] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:21.381 INFO  (qtp1570470538-48-localhost-65) [c: s: r: x:stocks_core2 t:localhost-65] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:32:21.434 INFO  (qtp1570470538-81-localhost-64) [c: s: r: x: t:localhost-64] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=55
+2024-03-28 20:32:35.446 INFO  (qtp1570470538-78-localhost-66) [c: s: r: x: t:localhost-66] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:35.451 INFO  (qtp1570470538-81-localhost-67) [c: s: r: x:stocks_core2 t:localhost-67] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:32:35.474 INFO  (qtp1570470538-78-localhost-69) [c: s: r: x:stocks_core2 t:localhost-69] o.a.s.c.S.Request webapp=/solr path=/analysis/field params={analysis.fieldname=Headline&analysis.showmatch=true&verbose_output=1&analysis.query=f&wt=json&_=1711657894698} status=0 QTime=3
+2024-03-28 20:32:35.502 INFO  (qtp1570470538-44-localhost-68) [c: s: r: x: t:localhost-68] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=52
+2024-03-28 20:32:40.348 INFO  (qtp1570470538-48-localhost-70) [c: s: r: x: t:localhost-70] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:40.353 INFO  (qtp1570470538-44-localhost-72) [c: s: r: x:stocks_core2 t:localhost-72] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:32:40.371 INFO  (qtp1570470538-48-localhost-73) [c: s: r: x:stocks_core2 t:localhost-73] o.a.s.c.S.Request webapp=/solr path=/analysis/field params={analysis.fieldvalue=f&analysis.fieldname=Headline&analysis.showmatch=true&verbose_output=1&analysis.query=f&wt=json&_=1711657894698} status=0 QTime=0
+2024-03-28 20:32:40.404 INFO  (qtp1570470538-81-localhost-71) [c: s: r: x: t:localhost-71] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=52
+2024-03-28 20:32:55.464 INFO  (qtp1570470538-44-localhost-76) [c: s: r: x: t:localhost-76] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:55.464 INFO  (qtp1570470538-81-localhost-74) [c: s: r: x:stocks_core2 t:localhost-74] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=0
+2024-03-28 20:32:55.507 INFO  (qtp1570470538-47-localhost-75) [c: s: r: x: t:localhost-75] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=43
+2024-03-28 20:32:59.715 INFO  (qtp1570470538-78-localhost-78) [c: s: r: x: t:localhost-78] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:32:59.715 INFO  (qtp1570470538-47-localhost-77) [c: s: r: x:stocks_core2 t:localhost-77] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-28 20:32:59.757 INFO  (qtp1570470538-48-localhost-79) [c: s: r: x: t:localhost-79] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=41
+2024-03-28 20:33:01.671 INFO  (qtp1570470538-81-localhost-80) [c: s: r: x:stocks_core2 t:localhost-80] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1711657594470&ts=1711657594470} hits=14096 status=0 QTime=39
+2024-03-28 20:33:01.671 INFO  (qtp1570470538-81-localhost-80) [c: s: r: x:stocks_core2 t:localhost-80] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1711657594470&ts=1711657594470} status=0 QTime=39
+2024-03-28 20:33:02.067 INFO  (qtp1570470538-45-localhost-83) [c: s: r: x: t:localhost-83] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:02.071 INFO  (qtp1570470538-81-localhost-81) [c: s: r: x:stocks_core2 t:localhost-81] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1711657982062} status=0 QTime=4
+2024-03-28 20:33:02.104 INFO  (qtp1570470538-78-localhost-84) [c: s: r: x:stocks_core2 t:localhost-84] o.a.s.c.S.Request webapp=/solr path=/admin/file params={file=lang&wt=json&_=1711657982062} status=0 QTime=22
+2024-03-28 20:33:02.118 INFO  (qtp1570470538-44-localhost-82) [c: s: r: x: t:localhost-82] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=51
+2024-03-28 20:33:12.382 INFO  (qtp1570470538-47-localhost-85) [c: s: r: x:stocks_core2 t:localhost-85] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1711657594470&ts=1711657594470} hits=14096 status=0 QTime=3
+2024-03-28 20:33:12.382 INFO  (qtp1570470538-47-localhost-85) [c: s: r: x:stocks_core2 t:localhost-85] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1711657594470&ts=1711657594470} status=0 QTime=3
+2024-03-28 20:33:13.629 INFO  (qtp1570470538-47-localhost-86) [c: s: r: x: t:localhost-86] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:13.669 INFO  (qtp1570470538-81-localhost-87) [c: s: r: x:stocks_core2 t:localhost-87] o.a.s.c.S.Request webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1711657993623} status=0 QTime=40
+2024-03-28 20:33:13.673 INFO  (qtp1570470538-45-localhost-88) [c: s: r: x: t:localhost-88] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=45
+2024-03-28 20:33:16.521 INFO  (qtp1570470538-45-localhost-91) [c: s: r: x:stocks_core2 t:localhost-91] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-28 20:33:16.521 INFO  (qtp1570470538-46-localhost-89) [c: s: r: x: t:localhost-89] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:16.566 INFO  (qtp1570470538-81-localhost-90) [c: s: r: x: t:localhost-90] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=45
+2024-03-28 20:33:20.935 INFO  (qtp1570470538-45-localhost-93) [c: s: r: x: t:localhost-93] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:20.945 INFO  (qtp1570470538-81-localhost-94) [c: s: r: x:stocks_core2 t:localhost-94] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1711657878330} status=0 QTime=9
+2024-03-28 20:33:20.980 INFO  (qtp1570470538-46-localhost-92) [c: s: r: x: t:localhost-92] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=44
+2024-03-28 20:33:25.730 INFO  (qtp1570470538-45-localhost-98) [c: s: r: x:stocks_core2 t:localhost-98] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1711657931791} status=0 QTime=0
+2024-03-28 20:33:25.730 INFO  (qtp1570470538-79-localhost-96) [c: s: r: x: t:localhost-96] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:25.731 INFO  (qtp1570470538-78-localhost-97) [c: s: r: x:stocks_core2 t:localhost-97] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:33:25.762 INFO  (qtp1570470538-46-localhost-99) [c: s: r: x:stocks_core2 t:localhost-99] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1711657878330} status=0 QTime=5
+2024-03-28 20:33:25.787 INFO  (qtp1570470538-76-localhost-95) [c: s: r: x: t:localhost-95] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=56
+2024-03-28 20:33:28.256 INFO  (qtp1570470538-47-localhost-102) [c: s: r: x: t:localhost-102] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:28.256 INFO  (qtp1570470538-81-localhost-103) [c: s: r: x:stocks_core2 t:localhost-103] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1711657931791} status=0 QTime=0
+2024-03-28 20:33:28.257 INFO  (qtp1570470538-78-localhost-100) [c: s: r: x:stocks_core2 t:localhost-100] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1711657878330} status=0 QTime=1
+2024-03-28 20:33:28.284 INFO  (qtp1570470538-46-localhost-104) [c: s: r: x:stocks_core2 t:localhost-104] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1711657878330} status=0 QTime=4
+2024-03-28 20:33:28.306 INFO  (qtp1570470538-44-localhost-101) [c: s: r: x: t:localhost-101] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=50
+2024-03-28 20:33:34.214 INFO  (qtp1570470538-78-localhost-107) [c: s: r: x: t:localhost-107] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:33:34.235 INFO  (qtp1570470538-44-localhost-105) [c: s: r: x:stocks_core2 t:localhost-105] o.a.s.c.S.Request webapp=/solr path=/admin/segments params={wt=json&_=1711658014210} status=0 QTime=21
+2024-03-28 20:33:34.255 INFO  (qtp1570470538-79-localhost-106) [c: s: r: x: t:localhost-106] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=41
+2024-03-28 20:37:01.464 INFO  (qtp1570470538-73-localhost-109) [c: s: r: x:stocks_core2 t:localhost-109] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-28 20:37:01.464 INFO  (qtp1570470538-49-localhost-110) [c: s: r: x: t:localhost-110] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:37:01.497 INFO  (qtp1570470538-50-localhost-108) [c: s: r: x: t:localhost-108] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=33
+2024-03-28 20:37:15.090 INFO  (qtp1570470538-80-localhost-114) [c: s: r: x:stocks_core2 t:localhost-114] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-28 20:37:15.091 INFO  (qtp1570470538-76-localhost-112) [c: s: r: x: t:localhost-112] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-28 20:37:15.091 INFO  (qtp1570470538-46-localhost-113) [c: s: r: x:stocks_core2 t:localhost-113] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1711657996501} hits=14096 status=0 QTime=0
+2024-03-28 20:37:15.141 INFO  (qtp1570470538-75-localhost-111) [c: s: r: x: t:localhost-111] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=50
+2024-03-29 11:55:50.877 INFO  (qtp1570470538-95-localhost-116) [c: s: r: x: t:localhost-116] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=16
+2024-03-29 11:55:50.877 INFO  (qtp1570470538-50-localhost-118) [c: s: r: x:stocks_core2 t:localhost-118] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=13
+2024-03-29 11:55:51.096 INFO  (qtp1570470538-97-localhost-119) [c: s: r: x:stocks_core2 t:localhost-119] o.a.s.c.S.Request webapp=/solr path=/select params={q=id:e1f17ef8-6354-4228-97d1-33261f27915e&indent=true&q.op=OR&useParams=&_=1711657996501} hits=1 status=0 QTime=236
+2024-03-29 11:55:51.105 INFO  (qtp1570470538-90-localhost-117) [c: s: r: x: t:localhost-117] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=246
+2024-03-29 11:56:25.563 INFO  (qtp1570470538-92-localhost-122) [c: s: r: x:stocks_core2 t:localhost-122] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 11:56:25.564 INFO  (qtp1570470538-73-localhost-121) [c: s: r: x: t:localhost-121] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 11:56:25.639 INFO  (qtp1570470538-81-localhost-120) [c: s: r: x: t:localhost-120] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=76
+2024-03-29 11:56:31.355 INFO  (qtp1570470538-96-localhost-123) [c: s: r: x: t:localhost-123] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 11:56:31.356 INFO  (qtp1570470538-79-localhost-126) [c: s: r: x:stocks_core2 t:localhost-126] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 11:56:31.356 INFO  (qtp1570470538-50-localhost-124) [c: s: r: x:stocks_core2 t:localhost-124] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1711657996501} hits=14096 status=0 QTime=1
+2024-03-29 11:56:31.425 INFO  (qtp1570470538-94-localhost-125) [c: s: r: x: t:localhost-125] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=70
+2024-03-29 11:57:08.667 INFO  (qtp1570470538-81-localhost-130) [c: s: r: x:stocks_core2 t:localhost-130] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 11:57:08.667 INFO  (qtp1570470538-73-localhost-128) [c: s: r: x: t:localhost-128] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 11:57:08.686 INFO  (qtp1570470538-92-localhost-129) [c: s: r: x:stocks_core2 t:localhost-129] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&indent=true&q.op=OR&useParams=&_=1711657996501} hits=1939 status=0 QTime=20
+2024-03-29 11:57:08.735 INFO  (qtp1570470538-97-localhost-127) [c: s: r: x: t:localhost-127] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=68
+2024-03-29 11:57:46.123 INFO  (qtp1570470538-49-localhost-132) [c: s: r: x: t:localhost-132] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 11:57:46.123 INFO  (qtp1570470538-96-localhost-134) [c: s: r: x:stocks_core2 t:localhost-134] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 11:57:46.124 INFO  (qtp1570470538-79-localhost-133) [c: s: r: x:stocks_core2 t:localhost-133] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&indent=true&q.op=OR&useParams=&_=1711657996501} hits=2 status=0 QTime=2
+2024-03-29 11:57:46.191 INFO  (qtp1570470538-50-localhost-131) [c: s: r: x: t:localhost-131] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=69
+2024-03-29 12:25:35.359 INFO  (qtp1570470538-105-localhost-136) [c: s: r: x:stocks_core2 t:localhost-136] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=1
+2024-03-29 12:25:35.359 INFO  (qtp1570470538-84-localhost-137) [c: s: r: x: t:localhost-137] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=1
+2024-03-29 12:25:35.412 INFO  (qtp1570470538-102-localhost-135) [c: s: r: x: t:localhost-135] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=55
+2024-03-29 12:26:13.352 INFO  (qtp1570470538-45-localhost-138) [c: s: r: x:stocks_core2 t:localhost-138] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 12:26:13.352 INFO  (qtp1570470538-91-localhost-140) [c: s: r: x: t:localhost-140] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 12:26:13.353 INFO  (qtp1570470538-97-localhost-141) [c: s: r: x:stocks_core2 t:localhost-141] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1711657996501} hits=14096 status=0 QTime=0
+2024-03-29 12:26:13.414 INFO  (qtp1570470538-103-localhost-139) [c: s: r: x: t:localhost-139] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=62
+2024-03-29 12:27:08.778 INFO  (qtp1570470538-102-localhost-143) [c: s: r: x: t:localhost-143] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711715228683} status=0 QTime=0
+2024-03-29 12:27:08.778 INFO  (qtp1570470538-103-localhost-145) [c: s: r: x:stocks_core2 t:localhost-145] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711715228757} status=0 QTime=0
+2024-03-29 12:27:08.779 INFO  (qtp1570470538-84-localhost-146) [c: s: r: x:stocks_core2 t:localhost-146] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&indent=true&q.op=OR&useParams=&_=1711715228757} hits=2 status=0 QTime=0
+2024-03-29 12:27:08.835 INFO  (qtp1570470538-104-localhost-144) [c: s: r: x: t:localhost-144] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711715228683} status=0 QTime=57
+2024-03-29 12:46:21.600 INFO  (qtp1570470538-108-localhost-152) [c: s: r: x: t:localhost-152] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711716381531} status=0 QTime=0
+2024-03-29 12:46:21.674 INFO  (qtp1570470538-109-localhost-153) [c: s: r: x: t:localhost-153] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711716381532} status=0 QTime=75
+2024-03-29 12:46:21.716 INFO  (qtp1570470538-81-localhost-154) [c: s: r: x: t:localhost-154] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711716381532} status=0 QTime=39
+2024-03-29 12:54:06.833 INFO  (qtp1570470538-114-localhost-155) [c: s: r: x:stocks_core2 t:localhost-155] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&wt=json} hits=1939 status=0 QTime=3
+2024-03-29 12:54:13.268 INFO  (qtp1570470538-108-localhost-156) [c: s: r: x:stocks_core2 t:localhost-156] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&wt=json} hits=1939 status=0 QTime=2
+2024-03-29 12:58:13.099 INFO  (qtp1570470538-113-localhost-157) [c: s: r: x:stocks_core2 t:localhost-157] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 12:58:26.585 INFO  (qtp1570470538-104-localhost-158) [c: s: r: x:stocks_core2 t:localhost-158] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 12:58:34.901 INFO  (qtp1570470538-81-localhost-159) [c: s: r: x:stocks_core2 t:localhost-159] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 13:05:33.285 INFO  (qtp1570470538-81-localhost-160) [c: s: r: x:stocks_core2 t:localhost-160] o.a.s.c.S.Request webapp=/solr path=/select params={q=Apple&wt=json} hits=0 status=0 QTime=6
+2024-03-29 13:05:43.424 INFO  (qtp1570470538-45-localhost-161) [c: s: r: x:stocks_core2 t:localhost-161] o.a.s.c.S.Request webapp=/solr path=/select params={q=Apple&wt=json} hits=0 status=0 QTime=0
+2024-03-29 13:05:55.563 INFO  (qtp1570470538-102-localhost-162) [c: s: r: x:stocks_core2 t:localhost-162] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:Apple&wt=json} hits=1939 status=0 QTime=2
+2024-03-29 13:06:17.606 INFO  (qtp1570470538-116-localhost-163) [c: s: r: x:stocks_core2 t:localhost-163] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 13:13:42.237 INFO  (qtp1570470538-118-localhost-164) [c: s: r: x:stocks_core2 t:localhost-164] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 13:51:02.993 INFO  (qtp1570470538-123-localhost-165) [c: s: r: x:stocks_core2 t:localhost-165] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=5
+2024-03-29 13:52:18.115 INFO  (qtp1570470538-104-localhost-166) [c: s: r: x:stocks_core2 t:localhost-166] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 13:52:29.715 INFO  (qtp1570470538-107-localhost-167) [c: s: r: x:stocks_core2 t:localhost-167] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 13:52:29.743 INFO  (qtp1570470538-108-localhost-168) [c: s: r: x:stocks_core2 t:localhost-168] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 13:52:37.208 INFO  (qtp1570470538-45-localhost-169) [c: s: r: x:stocks_core2 t:localhost-169] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 13:53:16.076 INFO  (qtp1570470538-102-localhost-170) [c: s: r: x:stocks_core2 t:localhost-170] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 13:53:16.078 INFO  (qtp1570470538-106-localhost-171) [c: s: r: x:stocks_core2 t:localhost-171] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 13:54:58.283 INFO  (qtp1570470538-109-localhost-172) [c: s: r: x:stocks_core2 t:localhost-172] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 13:55:07.389 INFO  (qtp1570470538-122-localhost-173) [c: s: r: x:stocks_core2 t:localhost-173] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 13:56:07.641 INFO  (qtp1570470538-104-localhost-174) [c: s: r: x:stocks_core2 t:localhost-174] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 13:56:25.471 INFO  (qtp1570470538-107-localhost-175) [c: s: r: x:stocks_core2 t:localhost-175] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 13:57:26.807 INFO  (qtp1570470538-108-localhost-176) [c: s: r: x:stocks_core2 t:localhost-176] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:08:52.738 INFO  (qtp1570470538-127-localhost-177) [c: s: r: x:stocks_core2 t:localhost-177] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 14:09:00.371 INFO  (qtp1570470538-106-localhost-178) [c: s: r: x:stocks_core2 t:localhost-178] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 14:09:03.990 INFO  (qtp1570470538-113-localhost-179) [c: s: r: x:stocks_core2 t:localhost-179] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:09:53.041 INFO  (qtp1570470538-109-localhost-180) [c: s: r: x:stocks_core2 t:localhost-180] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 14:10:52.520 INFO  (qtp1570470538-108-localhost-181) [c: s: r: x:stocks_core2 t:localhost-181] o.a.s.c.S.Request webapp=/solr path=/select params={q=Search&wt=json} hits=0 status=0 QTime=7
+2024-03-29 14:10:52.534 INFO  (qtp1570470538-45-localhost-182) [c: s: r: x:stocks_core2 t:localhost-182] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:11:20.292 INFO  (qtp1570470538-104-localhost-183) [c: s: r: x:stocks_core2 t:localhost-183] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 14:11:21.011 INFO  (qtp1570470538-107-localhost-184) [c: s: r: x:stocks_core2 t:localhost-184] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:11:21.371 INFO  (qtp1570470538-122-localhost-185) [c: s: r: x:stocks_core2 t:localhost-185] o.a.s.c.S.Request webapp=/solr path=/select params={q=a&wt=json} hits=0 status=0 QTime=2
+2024-03-29 14:11:21.383 INFO  (qtp1570470538-108-localhost-186) [c: s: r: x:stocks_core2 t:localhost-186] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 14:11:30.039 INFO  (qtp1570470538-123-localhost-187) [c: s: r: x:stocks_core2 t:localhost-187] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 14:11:30.301 INFO  (qtp1570470538-106-localhost-188) [c: s: r: x:stocks_core2 t:localhost-188] o.a.s.c.S.Request webapp=/solr path=/select params={q=a&wt=json} hits=0 status=0 QTime=1
+2024-03-29 14:11:30.315 INFO  (qtp1570470538-122-localhost-189) [c: s: r: x:stocks_core2 t:localhost-189] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 14:13:47.351 INFO  (qtp1570470538-113-localhost-190) [c: s: r: x:stocks_core2 t:localhost-190] o.a.s.c.S.Request webapp=/solr path=/select params={q=a&wt=json} hits=0 status=0 QTime=2
+2024-03-29 14:13:47.382 INFO  (qtp1570470538-127-localhost-191) [c: s: r: x:stocks_core2 t:localhost-191] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=18
+2024-03-29 14:15:33.970 INFO  (qtp1570470538-109-localhost-192) [c: s: r: x:stocks_core2 t:localhost-192] o.a.s.c.S.Request webapp=/solr path=/select params={q=a&wt=json} hits=0 status=0 QTime=1
+2024-03-29 14:15:33.982 INFO  (qtp1570470538-113-localhost-193) [c: s: r: x:stocks_core2 t:localhost-193] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=1
+2024-03-29 14:16:52.504 INFO  (qtp1570470538-45-localhost-194) [c: s: r: x:stocks_core2 t:localhost-194] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=0
+2024-03-29 14:17:34.098 INFO  (qtp1570470538-104-localhost-195) [c: s: r: x:stocks_core2 t:localhost-195] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=1
+2024-03-29 14:17:48.587 INFO  (qtp1570470538-107-localhost-196) [c: s: r: x:stocks_core2 t:localhost-196] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:18:35.233 INFO  (qtp1570470538-108-localhost-197) [c: s: r: x:stocks_core2 t:localhost-197] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:21:49.763 INFO  (qtp1570470538-109-localhost-198) [c: s: r: x:stocks_core2 t:localhost-198] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=2
+2024-03-29 14:22:06.481 INFO  (qtp1570470538-106-localhost-199) [c: s: r: x:stocks_core2 t:localhost-199] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=1
+2024-03-29 14:24:02.237 INFO  (qtp1570470538-127-localhost-200) [c: s: r: x:stocks_core2 t:localhost-200] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=2
+2024-03-29 14:25:14.704 INFO  (qtp1570470538-108-localhost-201) [c: s: r: x:stocks_core2 t:localhost-201] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=2
+2024-03-29 14:25:18.448 INFO  (qtp1570470538-45-localhost-202) [c: s: r: x:stocks_core2 t:localhost-202] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:a&wt=json} hits=1678 status=0 QTime=2
+2024-03-29 14:25:38.202 INFO  (qtp1570470538-104-localhost-203) [c: s: r: x:stocks_core2 t:localhost-203] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:b&wt=json} hits=2 status=0 QTime=1
+2024-03-29 14:27:40.923 INFO  (qtp1570470538-107-localhost-204) [c: s: r: x:stocks_core2 t:localhost-204] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:b&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:45:49.939 INFO  (qtp1570470538-135-localhost-205) [c: s: r: x:stocks_core2 t:localhost-205] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:b&wt=json} hits=2 status=0 QTime=0
+2024-03-29 14:46:38.084 INFO  (qtp1570470538-129-localhost-206) [c: s: r: x:stocks_core2 t:localhost-206] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 14:46:55.611 INFO  (qtp1570470538-113-localhost-207) [c: s: r: x:stocks_core2 t:localhost-207] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=2
+2024-03-29 14:48:16.989 INFO  (qtp1570470538-127-localhost-208) [c: s: r: x:stocks_core2 t:localhost-208] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 14:49:28.183 INFO  (qtp1570470538-108-localhost-209) [c: s: r: x:stocks_core2 t:localhost-209] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 14:50:04.714 INFO  (qtp1570470538-45-localhost-210) [c: s: r: x:stocks_core2 t:localhost-210] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 14:50:40.227 INFO  (qtp1570470538-104-localhost-211) [c: s: r: x:stocks_core2 t:localhost-211] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=1
+2024-03-29 14:50:54.610 INFO  (qtp1570470538-123-localhost-212) [c: s: r: x:stocks_core2 t:localhost-212] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:nvidia&wt=json} hits=2039 status=0 QTime=6
+2024-03-29 14:51:26.942 INFO  (qtp1570470538-134-localhost-213) [c: s: r: x:stocks_core2 t:localhost-213] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:nvidia&wt=json} hits=2039 status=0 QTime=0
+2024-03-29 14:51:46.875 INFO  (qtp1570470538-129-localhost-214) [c: s: r: x:stocks_core2 t:localhost-214] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:nvidia&wt=json} hits=2039 status=0 QTime=0
+2024-03-29 14:52:13.910 INFO  (qtp1570470538-45-localhost-218) [c: s: r: x:stocks_core2 t:localhost-218] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=1
+2024-03-29 14:52:13.911 INFO  (qtp1570470538-113-localhost-217) [c: s: r: x: t:localhost-217] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=1
+2024-03-29 14:52:13.914 ERROR (qtp1570470538-127-localhost-215) [c: s: r: x:stocks_core2 t:localhost-215] o.a.s.h.RequestHandlerBase Client exception => org.apache.solr.common.SolrException: undefined field headline
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1485)
+org.apache.solr.common.SolrException: undefined field headline
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1485) ~[?:?]
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:506) ~[?:?]
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:83) ~[?:?]
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:184) ~[?:?]
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:257) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:530) ~[?:?]
+	at org.apache.solr.parser.QueryParser.newFieldQuery(QueryParser.java:68) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:1143) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.handleBareTokenQuery(SolrQueryParserBase.java:859) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Term(QueryParser.java:454) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:293) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:173) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:143) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:276) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:173) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:431) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:226) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2884) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:875) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:561) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:262) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:219) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:249) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:598) ~[jetty-security-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1384) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1306) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-10.0.19.jar:10.0.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2024-03-29 14:52:13.915 INFO  (qtp1570470538-127-localhost-215) [c: s: r: x:stocks_core2 t:localhost-215] o.a.s.c.S.Request webapp=/solr path=/select params={q=headline:apple&indent=true&q.op=OR&useParams=&_=1711657996501} status=400 QTime=5
+2024-03-29 14:52:14.011 INFO  (qtp1570470538-139-localhost-216) [c: s: r: x: t:localhost-216] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=101
+2024-03-29 14:52:49.727 INFO  (qtp1570470538-108-localhost-219) [c: s: r: x: t:localhost-219] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 14:52:49.727 INFO  (qtp1570470538-129-localhost-221) [c: s: r: x:stocks_core2 t:localhost-221] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 14:52:49.783 INFO  (qtp1570470538-137-localhost-220) [c: s: r: x: t:localhost-220] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=56
+2024-03-29 14:52:53.608 INFO  (qtp1570470538-45-localhost-222) [c: s: r: x:stocks_core2 t:localhost-222] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 14:52:53.608 INFO  (qtp1570470538-113-localhost-224) [c: s: r: x: t:localhost-224] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 14:52:53.608 INFO  (qtp1570470538-138-localhost-225) [c: s: r: x:stocks_core2 t:localhost-225] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1711657996501} hits=14096 status=0 QTime=0
+2024-03-29 14:52:53.670 INFO  (qtp1570470538-127-localhost-223) [c: s: r: x: t:localhost-223] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=63
+2024-03-29 14:53:03.845 INFO  (qtp1570470538-136-localhost-227) [c: s: r: x: t:localhost-227] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 14:53:03.845 INFO  (qtp1570470538-137-localhost-228) [c: s: r: x:stocks_core2 t:localhost-228] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 14:53:03.846 INFO  (qtp1570470538-108-localhost-229) [c: s: r: x:stocks_core2 t:localhost-229] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&indent=true&q.op=OR&useParams=&_=1711657996501} hits=1939 status=0 QTime=1
+2024-03-29 14:53:03.916 INFO  (qtp1570470538-129-localhost-226) [c: s: r: x: t:localhost-226] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=70
+2024-03-29 14:53:07.948 INFO  (qtp1570470538-113-localhost-230) [c: s: r: x:stocks_core2 t:localhost-230] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1711657979709} status=0 QTime=0
+2024-03-29 14:53:07.948 INFO  (qtp1570470538-45-localhost-231) [c: s: r: x: t:localhost-231] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1711657594469} status=0 QTime=0
+2024-03-29 14:53:07.949 INFO  (qtp1570470538-138-localhost-233) [c: s: r: x:stocks_core2 t:localhost-233] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&indent=true&q.op=OR&useParams=&_=1711657996501} hits=1939 status=0 QTime=0
+2024-03-29 14:53:08.006 INFO  (qtp1570470538-127-localhost-232) [c: s: r: x: t:localhost-232] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1711657594470} status=0 QTime=58
+2024-03-29 14:53:57.372 INFO  (qtp1570470538-123-localhost-234) [c: s: r: x:stocks_core2 t:localhost-234] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:B&wt=json} hits=2 status=0 QTime=2
+2024-03-29 14:54:06.157 INFO  (qtp1570470538-134-localhost-235) [c: s: r: x:stocks_core2 t:localhost-235] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=1
+2024-03-29 14:55:45.758 INFO  (qtp1570470538-137-localhost-236) [c: s: r: x:stocks_core2 t:localhost-236] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 15:00:49.691 INFO  (qtp1570470538-129-localhost-237) [c: s: r: x:stocks_core2 t:localhost-237] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&start=10&rows=10&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 15:01:16.032 INFO  (qtp1570470538-134-localhost-238) [c: s: r: x:stocks_core2 t:localhost-238] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&start=9&rows=10&wt=json} hits=1939 status=0 QTime=0
+2024-03-29 15:01:31.889 INFO  (qtp1570470538-140-localhost-239) [c: s: r: x:stocks_core2 t:localhost-239] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:b&start=9&rows=10&wt=json} hits=2 status=0 QTime=1
+2024-03-29 17:54:18.193 INFO  (qtp1570470538-145-localhost-240) [c: s: r: x:stocks_core2 t:localhost-240] o.a.s.c.S.Request webapp=/solr path=/select params={q=Headline:apple&wt=json} hits=1939 status=0 QTime=13
