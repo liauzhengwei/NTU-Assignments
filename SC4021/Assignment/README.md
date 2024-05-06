@@ -7,7 +7,7 @@ Written Report
 - 8.pdf
 
 Code
-- contains code for solr and classification results
+- contains code for solr and classification
 
 Data
 - contains datasets of online sentiment benchmarks + manually labelled data + model labelled data
