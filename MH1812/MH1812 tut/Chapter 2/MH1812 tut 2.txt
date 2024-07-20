@@ -1,0 +1,179 @@
+Q1
+A proposition is a declarative statement that is either true or false
+
+1.
+2+2=5 is false and is a proposition
+
+2.
+2+2=4 is true and is a proposition
+
+3.
+x=3. x is not defined and is not a proposition
+
+4.
+Every week has a sunday is true and is a proposition
+
+5.
+Have you read "Catch 22" is a question and is not a proposition
+
+Q2
+p q   pvq  (pvq)'   p'  q'  p'nq'
+0 0   0     1       1   1   1
+0 1   1     0       1   0   0
+1 0   1     0       0   1   0
+1 1   1     0       0   0   0
+
+Thus (pvq)'= p'nq'
+
+Q3
+p n (p v q)
+
+p q  pvq  pn(pvq)
+0 0  0     0 
+0 1  1     0
+1 0  1     1
+1 1  1     1
+
+Thus, p = pn(pvq)
+
+Q4
+(p n q) v r = (p v r)n(q v r)
+(p v q) n r = (p n r)v(q n r)
+
+p q r  pnq pvr qvr  (p n q)v r  (p v r)n(q v r)  pvq pnr qnr (p v q)n r  (p n r)v(q n r)
+0 0 0  0    0   0      0           0              0   0   0     0             0
+0 0 1  0    1   1      1           1              0   0   0     0             0
+0 1 0  0    0   1      0           0              1   0   0     0             0
+0 1 1  0    1   1      1           1              1   0   1     1             1
+1 0 0  0    1   0      0           0              1   0   0     0             0
+1 0 1  0    1   1      1           1              1   1   0     1             1
+1 1 0  1    1   1      1           1              1   0   0     0             0
+1 1 1  1    1   1      1           1              1   1   1     1             1
+
+Q5
+(pvq')'v(p'nq')=p'
+
+p q p'  q'  p'nq' pvq'  (pvq')'  (pvq')'v(p'nq')
+0 0 1   1   1      1      0         1
+0 1 1   0   0      0      1         1
+1 0 0   1   0      1      0         0
+1 1 0   0   0      1      0         0
+
+(pvq')'v(p'nq')= p'q v(p'q') = p'(q v q') = p'(1) = p'
+
+(p'q)v(p'q')=p'(q v q')=p'
+
+Q6
+q' -> p' = p -> q
+
+p q p'  q'  p-> q  q' -> p'
+0 0 1   1   1        1
+0 1 1   0   1        1
+1 0 0   1   0        0
+1 1 0   0   1        1
+
+q''v p' = p'vq = p->q  
+
+Q7
+pvq ->r = (p->r)n(q->r)
+
+p q r  pvq  pvq->r  p->r  q->r (p->r)n(q->r)
+0 0 0  0     1       1     1      1
+0 0 1  0     1       1     1      1
+0 1 0  1     0       1     0      0
+0 1 1  1     1       1     1      1
+1 0 0  1     0       0     1      0
+1 0 1  1     1       1     1      1
+1 1 0  1     0       0     0      0
+1 1 1  1     1       1     1      1
+
+LHS = (PVQ)->R
+=(PVQ)'VR
+=(P'NQ')VR
+=(P'VR)N(Q'VR)
+=(P->R)N(Q->R)
+
+
+Q8
+No
+p->r = (p-> q)n(q->r)
+(p-> q)n(q->r) not same as (p-> q)v(q->r)
+
+Q9
+
+p'->F
+therefore p
+
+p p'
+1 0
+
+Q10
+p'-> C
+threfore p
+
+p' = p n p' = C
+p p'
+T C 
+
+Q11
+p' ->  rs'
+t->s
+u-> p'
+w'
+u v w 
+Thus, t->w
+
+
+U V W
+W'
+U           disjunctive syllogism
+u->p'
+p'           Modus ponens
+p'->(r n s')
+r n s'           Modus ponens
+s'               conjunctive syllogism
+t->s
+t'               Modus Tollens
+t' v w              disjunctive additions
+t->w
+
+Valid
+
+Q12
+p
+p v q
+q-> (r->s)
+t->r
+thus,s'->t'
+
+Counterexample:
+
+s'->t'      to make the conclusion false, s = F,t = T
+P1 true,We require p=T
+P4 true,We require r=T
+P3 true, we require q =F
+
+p q r s t p1 p2 p3 p4 conclusion
+T F T F T T  T  T  T   F
+
+Invalid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

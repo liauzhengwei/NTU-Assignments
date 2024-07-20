@@ -1,0 +1,167 @@
+1.
+2 is the only even prime number
+
+Prime numbers(p) only have two factors, itself(p) and 1,p>1
+even numbers,e are divisible by 2 like 2,4,6,8
+e=2n. Therefore, the factors are 2,n and 1. If n!=1, there will be more than two factors. 
+
+2.
+If n is odd, n^2 is also odd
+
+Case1: n is even=> n=2k for some k E Z =>n^2 =(2k)^2 = 4k^2 is even
+
+Case2: n is odd=> n=2k+1 for some k E Z =>n^2 = (2k1)^2= 4k2+4k+1 = 4(k2+k) +1 is odd
+therefore n and n2 can either be both odd or both even
+
+Q3
+  __
+\/2   = m/n
+2=(m/n)^2
+2=m^2/n^2 
+2*n^2=m^2 Thus m^2 is an even number so m is even
+
+m is a multiple of and m^2 is a multiple of 4
+Since 2*n^2=m^2,n^2 is a multiple of 2 and n is also even 
+
+m is even,m=2k
+2n2=4k2
+n2=2k2
+thus n is even
+
+q4
+1.
+(a mod n) + (b mod n)= a+b(mod n)
+qn + r1 + r2 + qn = a+b(mod n)
+
+
+
+q1,r1,q2,r2 are integers and 0<=r1<=n-1,0<=r2<=n-1
+a+b-r1-r2=q1n+r1+q2n+r2-r1-r2=q1n+q2n=(q1+q2)n
+which is divisible by n
+r1+r2=a+b(mod n)
+
+
+
+
+2.
+(a mod n) * (b mod n)= a*b(mod n)
+r1 * qn * r2 *qn = a*b(mod n)
+
+q1,r1,q2,r2 are integers and 0<=r1<=n-1,0<=r2<=n-1
+a*b/r1/r2= q1n*r1*q2n*r2/r1/r2= q1n*q2n = (q1*q2)n
+which is divisible by n
+r1*r2=a*b(mod n)
+
+
+
+q5
++  0  1  2  3
+0  0  1  2  3
+1  1  2  3  4
+2  2  3  4  5
+3  3  4  5  6
+
+*  0  1  2  3
+0  0  0  0  0
+1  0  1  2  3
+2  0  2  4  6
+3  0  3  6  9
+
+q6
+[p(p+1)]/2 = 0 (mod p),p is a prime number
+[p(p+1)]/2 = qp + 0,q is quotient
+p^2+p = 2qp
+p^2+(1-2q)p=0
+p(p+1-2q)=0
+p=0 (reject) or p+1-2q=0
+p=2q+1
+
+q7
+7*7=49
+49*7=343
+343*7=2401
+2401*7=16807
+16807*7=117649
+117649*7=823543
+
+last digit:7^1=7,7^2=9,7^3=3,7^4=1,7^5=7,7^6=9,7^7=3
+every 4 powers of 7, the last digit repeats
+
+7^9999 = 7^9996+3
+Thus last digit follows 7^3 = 1
+
+use mod instead
+7^1 mod 10 = 7
+7^2 mod10 = 49 mod 10 = 9
+...
+
+q8
+8*8=64
+64*8=512
+512*8=4096
+4096*8=32768
+32768*8=262144
+262144*8=2097152
+
+last digit:8^1=8,8^2=4,8^3=2,8^4=6,8^5=8,8^6=4,8^7=2
+every 4 powers of 8 then last digit repeats
+
+8^9999 = 8^9996+3
+Thus last digit follows 8^3 = 2
+
+
+8^9999 mod 10 = (2^3)^9999 mod 10 = 2^29997 mod 10
+Let r be 2^29997 mod 10
+2^29997 = 10 q +r
+2^29996= 5 q +r/2
+r/2 = 2^29996 mod 5
+2^4 mod 5 = 1
+r/2 = 2^29996 mod 5 =(2^4)7499 mod 5
+=(2^4 mod 5)^7499 mod 5
+= 1
+
+r = 2
+
+
+
+q9
+1. 
+S={odd integers}
+S is closed under * as odd*odd=odd.
+Thus, the result is an element of S and S is closed under*
+
+2.
+S={non-zero rational numbers Q\{0}}
+S is closed under / as any number divided by another number can never be zero 
+and will be an element of rational numbers.
+
+3.
+S={positive integers Z+}
+S is not closed under - as when a smaller number is deducted by a bigger number,
+the result is negative and is not an element of S.eg. 1-2=-1
+
+4.
+S={irrational numbers}
+S is not closed under + as when two irrational numbers are added together,
+the result may be rational. eg. pi + -pi=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
