@@ -1,6 +1,5 @@
-# NTU-Assignments
+# NTU Modules with Assignments and Projects
 
-Assignments from core modules of the Computer Science course in NTU:
 1. SC1003 Introduction to Computational Thinking and Programming
 2. SC1005 Digital Logic
 3. SC1006 Computer Organisation & Architecture
@@ -15,3 +14,8 @@ Assignments from core modules of the Computer Science course in NTU:
 12. SC3000 Artificial Intelligence
 13. SC3010 Computer Security
 14. SC4021 Information Retrieval
+
+# Other NTU modules
+1. MH1812 Discrete Mathematics
+2. SC1004 Linear Algebra for Computing
+3. SC2000 Probability and Statistics for Computing
