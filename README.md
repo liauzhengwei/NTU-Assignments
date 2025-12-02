@@ -13,7 +13,9 @@
 11. SC2207 Introduction to Databases
 12. SC3000 Artificial Intelligence
 13. SC3010 Computer Security
-14. SC4021 Information Retrieval
+14. SC4001 Neural Networks and Deep Learning
+15. SC4002 Natural Language Processing
+16. SC4021 Information Retrieval
 
 # Other NTU modules
 1. MH1812 Discrete Mathematics
